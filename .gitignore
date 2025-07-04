@@ -1,0 +1,11 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore config files
+config.php
+.env
+
