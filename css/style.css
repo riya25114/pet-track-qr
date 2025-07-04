@@ -1,0 +1,137 @@
+/* this css file styles the registration page. */
+
+:root {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --form-bg: #1e1e1e;
+    --input-bg: #2b2b2b;
+    --border-color: #444;
+    --placeholder-color: #bbb;
+    --button-color: #4CAF50;
+    --button-hover: #45a049;
+    --neon-color: #ff007c;
+    /* starting neon color for dark mode */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: var(--form-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="file"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="text"]#allergy_info {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="file"], input[type="checkbox"] {
+    width: auto;
+}
+
+input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+/* Neon glow when hovering over the checkbox */
+input[type="checkbox"]:hover {
+    box-shadow: 0 0 8px var(--neon-color);
+    border-color: var(--neon-color);
+    outline: none;
+  }
+  
+  /* Remove the default focus outline */
+  input[type="checkbox"]:focus {
+    outline: none;
+  }
+  
+  /* Custom neon glow when checked */
+  input[type="checkbox"]:checked {
+    box-shadow: 0 0 12px var(--neon-color);
+    border-color: var(--neon-color);
+  }  
+
+input[type="submit"] {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--button-hover);
+    box-shadow: 0 0 12px var(--neon-color);
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="file"]:hover  {
+    box-shadow: 0 0 8px var(--neon-color);
+    border-color: var(--neon-color);
+}
+
+#allergy-details {
+    margin-top: 10px;
+}
+
+::placeholder {
+    color: var(--placeholder-color);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--form-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    box-shadow: 0 0 10px var(--neon-color);
+    border-color: var(--neon-color);
+}

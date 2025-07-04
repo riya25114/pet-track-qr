@@ -1,0 +1,90 @@
+/* this page is used to style scan.php which is the page viewed by the person who found the pet. */
+
+:root {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --card-bg: #1e1e1e;
+    --neon-color: #ff007c;
+    --border-color: #333;
+    --btn-bg: #4CAF50;
+    --btn-hover: #45a049;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.success-card {
+    background-color: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    max-width: 450px;
+}
+
+.success-card h2 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.success-card p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.success-card img {
+    max-width: 200px;
+    margin-bottom: 20px;
+    border: 3px solid var(--neon-color);
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 0 12px var(--neon-color);
+}
+
+.qr-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--btn-bg);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px var(--neon-color);
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+    box-shadow: 0 0 12px var(--neon-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--neon-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--card-bg);
+    color: var(--neon-color);
+    box-shadow: 0 0 10px var(--neon-color);
+}

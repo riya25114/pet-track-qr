@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pet Registration</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    #allergy-details {
+      display: none;
+      margin-top: 10px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="theme-toggle">Switch Theme🌙</button>
+  <h1>Pet Registration</h1>
+  <h2>Generate a unique QR code for your pet's safety by filling out the below form</h2>
+
+  <form action="generate_qr.php" method="post" enctype="multipart/form-data">
+
+    <label for="pet_name">What do you call your pet?</label> <br>
+    <input type="text" id="pet_name" name="pet_name" placeholder="Type" required> <br><br>
+
+    <label for="pet_type">Which animal is your pet?</label> <br>
+    <input type="text" name="pet_type" id="pet_type" placeholder="Type" required> <br><br>
+
+    <label for="pet_breed">Enter the breed of your pet</label> <br>
+    <input type="text" name="pet_breed" id="pet_breed" placeholder="Type" required> <br><br>
+
+    <label for="pet_age">How old is your pet?</label> <br>
+    <input type="number" name="pet_age" id="pet_age" placeholder="Type" required> <br><br>
+
+    <label for="pet_allergies">Does your pet have any allergies?</label>
+    <input type="checkbox" id="pet_allergies" name="pet_allergies"><br>
+
+    <div id="allergy-details">
+      <label for="allergy_info">Please specify the allergies:</label> <br>
+      <input type="text" id="allergy_info" name="allergy_info" placeholder="e.g: peanuts, pollen"> <br><br>
+    </div>
+
+    <label for="pet_photo">Show us what your pet looks like</label> <br>
+    <input type="file" id="pet_photo" name="pet_photo" required> <br><br>
+
+    <label for="owner_email">Enter your email address where we can contact you</label> <br>
+    <input type="email" name="owner_email" id="owner_email" placeholder="Type" required> <br><br>
+
+    <input type="submit" value="Generate QR Code">
+
+  </form>
+
+
+  <script>
+    // Show/Hide allergy input on checkbox check
+    const allergyCheckbox = document.getElementById("pet_allergies");
+    const allergyDetails = document.getElementById("allergy-details");
+
+    allergyCheckbox.addEventListener("change", function () {
+      allergyDetails.style.display = this.checked ? "block" : "none";
+    });
+
+    // Theme toggle button behavior
+    const toggleButton = document.getElementById("theme-toggle");
+    let isDark = true;
+
+    toggleButton.addEventListener("click", () => {
+      if (isDark) {
+        // Light Mode Colors
+        document.documentElement.style.setProperty('--bg-color', '#ffffff');
+        document.documentElement.style.setProperty('--text-color', '#121212');
+        document.documentElement.style.setProperty('--form-bg', '#f0f0f0');
+        document.documentElement.style.setProperty('--input-bg', '#ffffff');
+        document.documentElement.style.setProperty('--border-color', '#ccc');
+        document.documentElement.style.setProperty('--placeholder-color', '#666');
+        document.documentElement.style.setProperty('--button-color', '#333');
+        document.documentElement.style.setProperty('--button-hover', '#555');
+        document.documentElement.style.setProperty('--neon-color', 'black'); //black neon for light mode
+        toggleButton.textContent = 'Switch Theme ☀️';
+      }
+
+      else {
+        // Dark Mode Colors
+        document.documentElement.style.setProperty('--bg-color', '#121212');
+        document.documentElement.style.setProperty('--text-color', '#f0f0f0');
+        document.documentElement.style.setProperty('--form-bg', '#1e1e1e');
+        document.documentElement.style.setProperty('--input-bg', '#2b2b2b');
+        document.documentElement.style.setProperty('--border-color', '#444');
+        document.documentElement.style.setProperty('--placeholder-color', '#bbb');
+        document.documentElement.style.setProperty('--button-color', '#4CAF50');
+        document.documentElement.style.setProperty('--button-hover', '#45a049');
+        document.documentElement.style.setProperty('--neon-color', '#ff007c'); //pink neon for dark mode
+        toggleButton.textContent = 'Switch Theme 🌙';
+      }
+      isDark = !isDark;
+    });
+
+  </script>
+
+</body>
+
+</html>

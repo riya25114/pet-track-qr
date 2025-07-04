@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PetTrackQR — Lost Pet Finder</title>
+  <link rel="stylesheet" href="css/styleIndex.css">
+</head>
+
+<body>
+
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle">Switch Theme 🌙</button>
+
+  <!-- Main Container -->
+  <div class="container">
+    <img src="images/rabbit.png" alt="Lost Pet Illustration" class="icon">
+    <h1>🐾 PetTrackQR 🐾</h1>
+    <p>Helping you reunite with your lost pets, register with ease!!!</p>
+
+    <img src="images/dog.png" alt="Pet Icon" class="hero-img">
+
+    <div class="button-group">
+      <a href="register.html" class="btn">🐶 Register your pet with us</a>
+      <!-- <a href="scan.php?pet_id=1" class="btn">🔍 Scan a QR Code</a> -->
+    </div>
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    let isDark = true;
+
+    toggleButton.addEventListener("click", () => {
+
+      if (isDark) {
+        document.documentElement.style.setProperty('--bg-color', '#ffffff');
+        document.documentElement.style.setProperty('--text-color', '#121212');
+        document.documentElement.style.setProperty('--card-bg', '#f0f0f0');
+        document.documentElement.style.setProperty('--btn-bg', '#333');
+        document.documentElement.style.setProperty('--btn-hover', '#555');
+        document.documentElement.style.setProperty('--border-color', '#ccc');
+        document.documentElement.style.setProperty('--neon-color', 'black');
+        toggleButton.textContent = 'Switch Theme ☀️';
+      }
+
+      else {
+        document.documentElement.style.setProperty('--bg-color', '#121212');
+        document.documentElement.style.setProperty('--text-color', '#f0f0f0');
+        document.documentElement.style.setProperty('--card-bg', '#1e1e1e');
+        document.documentElement.style.setProperty('--btn-bg', '#4CAF50');
+        document.documentElement.style.setProperty('--btn-hover', '#45a049');
+        document.documentElement.style.setProperty('--border-color', '#333');
+        document.documentElement.style.setProperty('--neon-color', '#ff007c');
+        toggleButton.textContent = 'Switch Theme 🌙';
+      }
+      isDark = !isDark;
+    });
+  </script>
+
+</body>
+
+</html>
