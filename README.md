@@ -27,6 +27,7 @@ Technologies used:
 - XAMPP (for local development)
 
 Project Structure
+
     pettrackqr/
     ├── css/
     │   ├── styleIndex.css        # Home page styling
