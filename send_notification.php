@@ -16,13 +16,13 @@ function sendEmail($to, $subject, $body) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'riyagarg1215@gmail.com';   // <-- your Gmail here
-        $mail->Password   = 'tcsslrdruivwgtwo';        // <-- the app password you just generated
+        $mail->Username   = 'your-mail-id';   // <-- your Gmail here
+        $mail->Password   = 'your-password';        // <-- the app password you just generated
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Recipients
-        $mail->setFrom('riyagarg1215@gmail.com', 'PetTrackQR');  // From email and name
+        $mail->setFrom('your-mail-id', 'PetTrackQR');  // From email and name
         $mail->addAddress($to);    // To email
 
         // Content
