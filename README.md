@@ -1,8 +1,8 @@
-🐾 PetTrackQR: Lost Pet Finder System
+# 🐾 PetTrackQR: Lost Pet Finder System
 
 A web-based application to help pet owners quickly reunite with their lost pets using scannable QR codes linked to their pet’s details and owner contact information.
 
-Overview:
+### Overview:
 PetTrackQR allows users to:
 - Register their pet's details
 - Upload a pet photo
@@ -10,7 +10,7 @@ PetTrackQR allows users to:
 - Display pet details by scanning the QR code
 - Notify the pet owner via email if their pet is found
 
-Features:
+### Features:
 - Register pet with details like name, type, breed, age, allergies, photo, and owner’s email.
 - Generate and download a QR code for each registered pet.
 - Scan a pet's QR code to view their information and notify the owner.
@@ -18,7 +18,7 @@ Features:
 - Light/Dark theme toggle on the homepage.
 - Clean, modern UI with custom icons and styling.
 
-Technologies used:
+### Technologies used:
 - HTML5, CSS3
 - PHP
 - MySQL
@@ -26,7 +26,7 @@ Technologies used:
 - PHP QR Code Library
 - XAMPP (for local development)
 
-Project Structure
+### Project Structure
 
     pettrackqr/
     ├── css/
@@ -49,7 +49,7 @@ Project Structure
     ├── db_connection.php         # Connection to the databse which can be included in every file
     └── README.md                 # Project documentation (this file)
 
-Database Tables:
+### Database Tables:
 table "pets"
 | Field         | Type                 |
 | id            | INT (Auto Increment) |
@@ -70,25 +70,25 @@ table "notifications"
 | message         | TEXT                 |
 | timestamp       | TIMESTAMP            |
 
-How It Works:
+### How It Works:
 Register a Pet → Owner fills in pet details and uploads a photo.
 Generate QR Code → A unique QR is generated linking to that pet’s `scan.php?pet_id=X`.
 Scan the QR Code → Finder scans QR with their phone to access the pet's profile.
 Notify the Owner → Finder submits their contact details and message.
 Email Sent via PHPMailer → Owner receives notification with finder’s info.
 
-Email Configuration:
+### Email Configuration:
 Uses PHPMailer with Gmail SMTP
 - Requires a Gmail App Password for secure mailing.
 - Update your Gmail and app password inside `send_notification.php`:
     $mail->Username = 'your_email@gmail.com';
     $mail->Password = 'your_app_password';
 
-License
+## License
 - This project is created for academic and learning purposes.
 - Feel free to fork and improve it for personal or educational use.
 
-Developed by
+## Developed by
 - Riya Garg
 - Computer Engineering Student
 - riyagarg1215@gmail.com
