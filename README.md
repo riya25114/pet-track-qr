@@ -51,24 +51,26 @@ PetTrackQR allows users to:
 
 ### Database Tables:
 table "pets"
-| Field         | Type                 |
-| id            | INT (Auto Increment) |
-| pet_name      | VARCHAR              |
-| pet_type      | VARCHAR              |
-| pet_breed     | VARCHAR              |
-| pet_age       | VARCHAR              |
-| pet_allergies | VARCHAR              |
-| pet_photo     | VARCHAR              |
-| owner_email   | VARCHAR              |
+
+    | Field         | Type                 |
+    | id            | INT (Auto Increment) |
+    | pet_name      | VARCHAR              |
+    | pet_type      | VARCHAR              |
+    | pet_breed     | VARCHAR              |
+    | pet_age       | VARCHAR              |
+    | pet_allergies | VARCHAR              |
+    | pet_photo     | VARCHAR              |
+    | owner_email   | VARCHAR              |
 
 table "notifications"
-| Field           | Type                 |
-| id              | INT (Auto Increment) |
-| pet_id          | INT                  |
-| finder_name     | VARCHAR              |
-| finder_contact  | VARCHAR              |
-| message         | TEXT                 |
-| timestamp       | TIMESTAMP            |
+
+    | Field           | Type                 |
+    | id              | INT (Auto Increment) |
+    | pet_id          | INT                  |
+    | finder_name     | VARCHAR              |
+    | finder_contact  | VARCHAR              |
+    | message         | TEXT                 |
+    | timestamp       | TIMESTAMP            |
 
 ### How It Works:
 Register a Pet → Owner fills in pet details and uploads a photo.
